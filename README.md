@@ -35,7 +35,7 @@
  * I increased the number of neurons in my second optimization attempt (same notebook). 128, 64, 8. All other parameters remained the same.
 	* **OPTIMIZATION ATTEMPT 2 RESULTS**:  Did not reach target performance
 * In `AlphabetSoupCharity_Model_Optimization_v2.ipynb`, I utilized `keras-tuner` in an attempt to optimize the parameters of my model to get the best possible accuracy. After a 32 minute analysis, `keras-tuner` suggested the following structure:
-![Model Structure] (Images/ktm_screenshot.png)
+![Model Structure](Images/ktm_screenshot.png)
 	* **OPTIMIZATION ATTEMPT 3 RESULTS**: Did not reach target performance
 
 ## Summary
