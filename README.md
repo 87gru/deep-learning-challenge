@@ -7,7 +7,7 @@
 
 > The nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
 >
-> From Alphabet Soup’s business team, you have received access to a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as:
+> From Alphabet Soup’s business team, you have received access to a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization.
 
 ## Methodology
 
@@ -24,6 +24,8 @@
 	* `SPECIAL_CONSIDERATIONS`
 	* `ASK_AMT`
 * In the first model attempt (`AlphabetSoupCharity_Model.ipynb`), I removed `EIN` and `NAME` columns during preprocessing as these are neither features nor targets. In subsequent optimization attempts, I also removed `STATUS` and `SPECIAL_CONSIDERATIONS` columns, as 99% of the values belonged to one category in both columns.
+* Utilize `pd.get_dummies() to encode categorical variables, then split preprocessed data into features X and y and use `train_test_split` to the split into training/testing datasets.
+* Scale the training and testing features by creating a `StandardScaler` instance, fitting it to train the data, then using the `transform` function.
 ### Compiling, Training, Evaluating the Model
 * In the initial model (`AlphabetSoupCharity_Model.ipynb`), I opted for three layers: the input layer, 1 hidden layer and the output layer. For the input and hidden layers, I defined 30 and 15 neurons, respectively, and assigned "relu" activation functions to both. The output layer had a sigmoid activation function. There was no specific rationale for these choices. It was just a test run.
 	* **INITIAL RESULTS**: Did not reach target performance
